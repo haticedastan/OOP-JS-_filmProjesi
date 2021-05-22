@@ -52,8 +52,13 @@ UI.prototype.addFilmToUI=function(newFilm){
          <td>${film.title}</td>
          <td>${film.director}</td>
          <td><a href="#" id = "delete-film" class = "btn btn-danger">Filmi Sil</a></td>
-      </tr>
+         </tr>
          `
 
         }) 
+    }
+
+    UI.prototype.deleteFilmFromUI=function(element){
+        
+        element.parentElement.parentElement.remove();
     }
