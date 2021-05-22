@@ -59,6 +59,16 @@ UI.prototype.addFilmToUI=function(newFilm){
     }
 
     UI.prototype.deleteFilmFromUI=function(element){
-        
+
         element.parentElement.parentElement.remove();
+    }
+
+    UI.prototype.clearAllFilmsFromUI=function(){
+        const filmList=document.getElementById("films");
+
+        //filmList.innerHTML="" YAVAŞ çalışr 
+        //null olmadıgı surece , child
+        while(filmList.firstElementChild!==null){
+            filmList.firstElementChild.remove();
+        }
     }
